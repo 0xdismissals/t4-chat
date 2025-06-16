@@ -54,7 +54,7 @@ Follow these instructions to get a local copy up and running.
 **Installation:**
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/t4-chat.git
+    git clone https://github.com/0xdismissals/t4-chat.git
     cd t4-chat
     ```
 

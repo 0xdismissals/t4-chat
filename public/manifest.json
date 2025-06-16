@@ -1,0 +1,21 @@
+{
+  "name": "T4-Chat: Your AI Companion",
+  "short_name": "T4-Chat",
+  "description": "An intelligent chat application powered by advanced AI models.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+} 

@@ -17,6 +17,7 @@ import { OpenAIProvider, OpenAIModel } from "@/ai/providers/openai";
 import { OpenRouterProvider } from "@/ai/providers/openrouter";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 import { useSync } from '@/contexts/SyncContext';
+import TextareaAutosize from 'react-textarea-autosize';
 
 interface ChatInputProps {
   setMessageExternal?: (setter: (msg: string) => void) => void;
@@ -51,14 +52,6 @@ export default function ChatInput({ setMessageExternal, textareaExternalRef, set
       setIsPwa(true);
     }
   }, []);
-
-  // Auto-expand textarea
-  useEffect(() => {
-    if (textareaRef.current) {
-      textareaRef.current.style.height = 'auto';
-      textareaRef.current.style.height = textareaRef.current.scrollHeight + 'px';
-    }
-  }, [message]);
 
   // Preview for attachment
   useEffect(() => {
@@ -382,11 +375,11 @@ export default function ChatInput({ setMessageExternal, textareaExternalRef, set
         )}
         <div className="flex items-end gap-2">
           <div className="flex flex-col flex-1">
-            <textarea
+            <TextareaAutosize
               ref={textareaRef}
               rows={1}
               placeholder="Type your message here..."
-              className="resize-none bg-transparent border-none outline-none text-foreground px-0 pt-2 pb-3 placeholder-muted-foreground min-h-[40px] max-h-[200px] overflow-hidden"
+              className="resize-none bg-transparent border-none outline-none text-foreground px-0 pt-2 pb-3 placeholder-muted-foreground min-h-[40px] max-h-[200px] overflow-y-auto"
               value={message}
               onChange={e => setMessage(e.target.value)}
               onKeyDown={handleKeyDown}

@@ -188,7 +188,7 @@ export const models: Model[] = [
     name: 'o1',
     provider: 'openai',
     providerLogo: 'openai.svg',
-    features: { vision: false, image_gen: false, audio_gen: false, video_gen: false, web_search: false, pdf: false, fast: true, reasoning: false },
+    features: { vision: false, image_gen: false, audio_gen: false, video_gen: false, web_search: false, pdf: true, fast: true, reasoning: false },
   },
   {
     id: 'gpt-4-turbo',
@@ -231,13 +231,13 @@ export const models: Model[] = [
     name: 'Llama 4 Maverick',
     provider: 'openrouter',
     providerLogo: 'openrouterai.png',
-    features: { vision: false, image_gen: false, audio_gen: false, video_gen: false, web_search: false, pdf: false, fast: false, reasoning: true },
+    features: { vision: true, image_gen: false, audio_gen: false, video_gen: false, web_search: false, pdf: true, fast: false, reasoning: true },
   },
   {
     id: 'meta-llama/llama-4-scout',
     name: 'Llama 4 Scout',
     provider: 'openrouter',
     providerLogo: 'openrouterai.png',
-    features: { vision: false, image_gen: false, audio_gen: false, video_gen: false, web_search: false, pdf: false, fast: true, reasoning: true },
+    features: { vision: true, image_gen: false, audio_gen: false, video_gen: false, web_search: false, pdf: true, fast: true, reasoning: true },
   },
 ]; 
